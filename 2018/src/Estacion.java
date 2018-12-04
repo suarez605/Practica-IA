@@ -55,7 +55,7 @@ public class Estacion{
     return numeroEstaciones;
   }
   
-  public Estacion getEstaciones(){
+  public Estacion[] getEstaciones(){
     return estaciones;
   }
   
