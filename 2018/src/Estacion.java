@@ -17,14 +17,14 @@ public class Estacion{
   public Estacion(String nombre, Estacion est1, Estacion est2, Estacion est3, Estacion est4, int lin1, int lin2){
     this.nombre=nombre;
     numeroEstaciones=0;
-    aux={est1, est2, est3, est4};
+    Estacion[] aux={est1, est2, est3, est4};
     for(int i=0; i<aux.length; i++){
       if(aux[i]!=null){
         numeroEstaciones++;
       }
     }
     estaciones=new Estacion[numeroEstaciones];
-    cont=0;
+    int cont=0;
     for(int i=0; i<aux.length; i++){
       if(aux[i]!=null){
         estaciones[cont]=aux[i];
@@ -32,16 +32,16 @@ public class Estacion{
       }
     }
     numeroLineas=0;
-    aux={lin1, lin2}
-    for(int i=0; i<aux.length; i++){
-      if(aux[i]!=null){
+    int[] aux2={lin1, lin2}
+    for(int i=0; i<aux2.length; i++){
+      if(aux2[i]!=null){
         numeroLineas++;
       }
       lineas=new int[numeroLineas];
       cont=0;
-      for(int i=0; i<aux.length; i++){
-      if(aux[i]!=null){
-        lineas[cont]=aux[i];
+      for(int i=0; i<aux2.length; i++){
+      if(aux2[i]!=null){
+        lineas[cont]=aux2[i];
         cont++;
       }
     }
