@@ -13,6 +13,8 @@ import java.awt.Font;
 import javax.swing.SwingConstants;
 import javax.swing.JComboBox;
 import javax.swing.JButton;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class Main extends JFrame {
 
@@ -40,6 +42,8 @@ public class Main extends JFrame {
 	/**
 	 * Create the frame.
 	 */
+	private String[] estaciones = { "Est1", "Est2"};
+	
 	public Main() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1224, 675);
@@ -69,8 +73,8 @@ public class Main extends JFrame {
 		panel.add(txtTashkentMetroApp);
 		txtTashkentMetroApp.setColumns(10);
 		
-		JComboBox comboBox = new JComboBox();
-		comboBox.setBounds(69, 474, 220, 20);
+		JComboBox comboBox = new JComboBox(estaciones);
+		comboBox.setBounds(76, 474, 220, 20);
 		panel.add(comboBox);
 		
 		JComboBox comboBox_1 = new JComboBox();
@@ -78,6 +82,13 @@ public class Main extends JFrame {
 		panel.add(comboBox_1);
 		
 		JButton btnBuscar = new JButton("BUSCAR");
+		btnBuscar.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent arg0) {
+				Ventana ventana = new Ventana();
+				ventana.setVisible(true);
+			}
+		});
 		btnBuscar.setBounds(521, 499, 160, 41);
 		panel.add(btnBuscar);
 		
