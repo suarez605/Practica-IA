@@ -15,13 +15,11 @@ import javax.swing.JComboBox;
 import javax.swing.JButton;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import javax.swing.JTextPane;
 
 public class Main extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField txtTashkentMetroApp;
-	private JTextField txtOrigen;
-	private JTextField txtDestino;
 
 	/**
 	 * Launch the application.
@@ -66,13 +64,6 @@ public class Main extends JFrame {
 		label.setBounds(201, 44, 750, 390);
 		panel.add(label);
 		
-		txtTashkentMetroApp = new JTextField();
-		txtTashkentMetroApp.setFont(new Font("Tahoma", Font.PLAIN, 21));
-		txtTashkentMetroApp.setText("Tashkent Metro APP");
-		txtTashkentMetroApp.setBounds(484, -1, 205, 41);
-		panel.add(txtTashkentMetroApp);
-		txtTashkentMetroApp.setColumns(10);
-		
 		JComboBox comboBox = new JComboBox(estaciones);
 		comboBox.setBounds(76, 474, 220, 20);
 		panel.add(comboBox);
@@ -92,16 +83,20 @@ public class Main extends JFrame {
 		btnBuscar.setBounds(521, 499, 160, 41);
 		panel.add(btnBuscar);
 		
-		txtOrigen = new JTextField();
-		txtOrigen.setText("ORIGEN");
-		txtOrigen.setBounds(132, 445, 86, 20);
-		panel.add(txtOrigen);
-		txtOrigen.setColumns(10);
+		JTextPane txtpnOrigen = new JTextPane();
+		txtpnOrigen.setText("ESTACION ORIGEN");
+		txtpnOrigen.setBounds(128, 443, 116, 20);
+		panel.add(txtpnOrigen);
 		
-		txtDestino = new JTextField();
-		txtDestino.setText("DESTINO");
-		txtDestino.setBounds(1020, 445, 86, 20);
-		panel.add(txtDestino);
-		txtDestino.setColumns(10);
+		JTextPane txtpnEstacionDestino = new JTextPane();
+		txtpnEstacionDestino.setText("ESTACION DESTINO");
+		txtpnEstacionDestino.setBounds(964, 443, 205, 20);
+		panel.add(txtpnEstacionDestino);
+		
+		JTextPane txtpnTashkentMetroApp = new JTextPane();
+		txtpnTashkentMetroApp.setFont(new Font("Tahoma", Font.PLAIN, 26));
+		txtpnTashkentMetroApp.setText("TASHKENT METRO APP");
+		txtpnTashkentMetroApp.setBounds(499, 0, 470, 50);
+		panel.add(txtpnTashkentMetroApp);
 	}
 }
