@@ -3,8 +3,11 @@ import java.util.ArrayList;
 public class AEstrella {
 
   public ArrayList<Estacion> aEstrella(Estacion[] estaciones, Estacion origen, Estacion destino){
-    if(origen.getLinea()==destino.getLinea()){
-      ArrayList<Estacion> result=new ArrayList<Estacion>();
+    ArrayList<Estacion> result=new ArrayList<Estacion>();
+    if(origen.getNombre.equals(destino.getNombre())){
+      result.add(origen);
+    }
+    else if(origen.getLinea()==destino.getLinea()){
       Estacion actual=origen;
       Estacion anterior=new Estacion("",null,null,null,-1);
       Estacion primerCamino=new Estacion("",null,null,null,-1);
