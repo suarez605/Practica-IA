@@ -10,6 +10,26 @@ public class Estacion{
     this.linea=linea;
   }
   
+  public Estacion(String nombre, String est1, String est2, String est3, int linea){
+    this.nombre=nombre;
+    Estacion[] aux={est1, est2, est3};
+    int cont=0;
+    for(int i=0;i<aux.length;i++){
+      if(aux[i]!=null){
+        cont++;
+      }
+    }
+    estaciones=new Estacion[cont];
+    cont=0;
+    for(int i=0;i<aux.length;i++){
+      if(aux[i]!=null){
+        estaciones[cont]=aux[i];
+        cont++;
+      }
+    }
+    this.linea=linea;
+  }
+  
   public String getNombre(){
     return nombre;
   }
