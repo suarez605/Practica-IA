@@ -1,7 +1,6 @@
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 import java.awt.Image;
-
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -15,12 +14,49 @@ import javax.swing.JComboBox;
 import javax.swing.JButton;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.util.ArrayList;
+
 import javax.swing.JTextPane;
 
 public class Main extends JFrame {
 
 	private JPanel contentPane;
+	protected ArrayList<Estacion> estaciones;
 
+	//Estaciones linea 1 - AZUL
+	protected Estacion beruni = new Estacion("Beruni", estaciones, 1);
+	protected Estacion tinchlik = new Estacion("Tinchlik", estaciones, 1);
+	protected Estacion chorsu = new Estacion("Chorsu", estaciones, 1);
+	protected Estacion gafurGulom = new Estacion("Gafur Gulom", estaciones, 1);
+	protected Estacion uzbekistan = new Estacion("Uzbekistan", estaciones, 1);
+	protected Estacion kosmonavtlar = new Estacion("Kosmonavtlar", estaciones, 1);
+	protected Estacion oybek = new Estacion("Oybek", estaciones, 1);
+	protected Estacion toshkent = new Estacion("Toshkent", estaciones, 1);
+	protected Estacion mashinasozlar = new Estacion("Mashinasozlar", estaciones, 1);
+	protected Estacion dostlik = new Estacion("Dostlik", estaciones, 1);
+	//Estaciones linea 2 - VERDE
+	protected Estacion shakhriston = new Estacion("Shakhriston", estaciones, 2);
+	protected Estacion bodomzor = new Estacion("Bodomzor", estaciones, 2);
+	protected Estacion minor = new Estacion("Minor", estaciones, 2);
+	protected Estacion abdullaKodiriy = new Estacion("Abdulla Kodiriy", estaciones, 2);
+	protected Estacion yunusRajabiy = new Estacion("Yunus Rajabiy", estaciones, 2);
+	protected Estacion mingUrik = new Estacion("Ming Urik", estaciones, 2);
+	//Estaciones linea 3 - ROJA
+	protected Estacion olmazor = new Estacion("Olmazor", estaciones, 3);
+	protected Estacion chilonzor = new Estacion("Chilonzor", estaciones, 3);
+	protected Estacion mirzoUlugbek = new Estacion("Mirzo Ulugbek", estaciones, 3);
+	protected Estacion novza = new Estacion("Novza", estaciones, 3);
+	protected Estacion milliyBog = new Estacion("Milliy Bog", estaciones, 3);
+	protected Estacion bunyodkor = new Estacion("Bunyodkor", estaciones, 3);
+	protected Estacion mustakillikMaydoni = new Estacion("Mustakillik Maydoni", estaciones, 3);
+	protected Estacion amirTemurHiyoboni = new Estacion("Amir Temur Hiyoboni", estaciones, 3);
+	protected Estacion khamidAlimjan = new Estacion("Khamid Alimjan", estaciones, 3);
+	protected Estacion pushkin = new Estacion("Pushkin", estaciones, 3);
+	protected Estacion buyukIpakYuli = new Estacion("Buyuk Ipak Yuli", estaciones, 3);
+	//Añadimos al array de estaciones las distintas estaciones 
+
+	
+	
 	/**
 	 * Launch the application.
 	 */
@@ -40,7 +76,7 @@ public class Main extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	private String[] estaciones = { "Est1", "Est2"};
+	private String[] estaciones2 = { "Est1", "Est2"};
 	
 	public Main() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
