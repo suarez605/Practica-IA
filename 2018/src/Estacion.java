@@ -32,7 +32,7 @@ public class Estacion{
     return estaciones;
   }
     
-  public int getLineas(){
+  public int getLinea(){
     return linea;
   }
   
