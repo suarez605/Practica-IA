@@ -42,8 +42,8 @@ public class AEstrella {
             }
           }
           if(i==actual.getEstaciones().length-1&&!aux){
-            ArrayList<Estacion> result=new ArrayList<Estacion>();
-            Estacion actual=origen;
+            result.clear();
+            actual=origen;
             aux=true;
           }
           i++;
