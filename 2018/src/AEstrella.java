@@ -1,10 +1,9 @@
 import java.util.ArrayList;
-
 public class AEstrella {
 
   public ArrayList<Estacion> aEstrella(Estacion[] estaciones, Estacion origen, Estacion destino){
     ArrayList<Estacion> result=new ArrayList<Estacion>();
-    if(origen.getNombre.equals(destino.getNombre())){
+    if(origen.getNombre().equals(destino.getNombre())){
       result.add(origen);
     }
     else if(origen.getLinea()==destino.getLinea()){
@@ -12,12 +11,12 @@ public class AEstrella {
       Estacion anterior=new Estacion("",null,null,null,-1);
       Estacion primerCamino=new Estacion("",null,null,null,-1);
       boolean inicio=true;
-      boolean final=false;
+      boolean vfinal=false;
       boolean aux=false;
       boolean aux2=false;
       int i=0;
       int j=0;
-      while(!final){
+      while(!vfinal){
         result.add(actual);
         aux=false;
         i=0;
@@ -26,7 +25,8 @@ public class AEstrella {
             aux2=false;
             j=0;
             while(!aux2){
-              if(estaciones[j].equals(actual.getEstaciones[i])){
+            	String[] aux3 = actual.getEstaciones();
+              if(estaciones[j].equals(aux3[i])){
                 aux2=true;
                 if(estaciones[j].getLinea()==actual.getLinea()){
                   anterior=actual;
@@ -50,7 +50,7 @@ public class AEstrella {
         }
         if(actual.getNombre().equals(destino.getNombre())){
           result.add(actual);
-          final=true;
+          vfinal=true;
         }
       }
     }
