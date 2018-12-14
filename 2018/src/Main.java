@@ -23,39 +23,55 @@ public class Main extends JFrame {
 
 	private JPanel contentPane;
 	
+
+	
 	// { } linea 1 - AZUL
 	protected Estacion beruni = new Estacion("Beruni", "Tinchlik","", "", 1);
 	protected Estacion tinchlik = new Estacion("Tinchlik", "Beruni", "Chorsu", "", 1);
 	protected Estacion chorsu = new Estacion("Chorsu", "Tinchlik", "Gafur Gulom", "", 1);
 	protected Estacion gafurGulom = new Estacion("Gafur Gulom", "Chorsu", "Alisher Navoi", "",  1);
-	protected Estacion uzbekistan = new Estacion("Alisher Navoi", "Gafur Gulom","Uzbekistan", "", 1);
-	protected Estacion alisherNavoi = new Estacion("Uzbekistan", "Alisher Navoi","Kosmonavtlar", "", 1);
-	protected Estacion kosmonavtlar = new Estacion("Kosmonavtlar", { }, 1);
-	protected Estacion oybek = new Estacion("Oybek", { }, 1);
-	protected Estacion toshkent = new Estacion("Toshkent", { }, 1);
-	protected Estacion mashinasozlar = new Estacion("Mashinasozlar", { }, 1);
-	protected Estacion dostlik = new Estacion("Dostlik", { }, 1);
+	protected Estacion alisherNavoi = new Estacion("Alisher Navoi", "Gafur Gulom","Uzbekistan", "Pakhtakor", 1);
+	protected Estacion uzbekistan = new Estacion("Uzbekistan", "Alisher Navoi","Kosmonavtlar", "", 1);
+	protected Estacion kosmonavtlar = new Estacion("Kosmonavtlar", "Uzbekistan", "Oybek", "", 1);
+	protected Estacion oybek = new Estacion("Oybek", "Kosmonavtlar", "Toshkent", "Ming Urik", 1);
+	protected Estacion toshkent = new Estacion("Toshkent", "Oybek", "Mashinasozlar", "", 1);
+	protected Estacion mashinasozlar = new Estacion("Mashinasozlar", "Toshkent", "Dostlik", "", 1);
+	protected Estacion dostlik = new Estacion("Dostlik", "Mashinasozlar","","", 1);
 	// { } linea 2 - VERDE
-	protected Estacion shakhriston = new Estacion("Shakhriston", { }, 2);
-	protected Estacion bodomzor = new Estacion("Bodomzor", { }, 2);
-	protected Estacion minor = new Estacion("Minor", { }, 2);
-	protected Estacion abdullaKodiriy = new Estacion("Abdulla Kodiriy", { }, 2);
-	protected Estacion yunusRajabiy = new Estacion("Yunus Rajabiy", { }, 2);
-	protected Estacion mingUrik = new Estacion("Ming Urik", { }, 2);
+	protected Estacion shakhriston = new Estacion("Shakhriston", "Bodomzor", "", "", 2);
+	protected Estacion bodomzor = new Estacion("Bodomzor", "Shakhriston", "Minor", "", 2);
+	protected Estacion minor = new Estacion("Minor", "Bodomzor", "Abdulla Kodiriy", "", 2);
+	protected Estacion abdullaKodiriy = new Estacion("Abdulla Kodiriy", "Minor", "Yunus Rajabiy", "", 2);
+	protected Estacion yunusRajabiy = new Estacion("Yunus Rajabiy", "Abdulla Kodiriy", "Ming Uri", "Amir Temur Hiyoboni", 2);
+	protected Estacion mingUrik = new Estacion("Ming Urik", "Yunus Rajabiy", "Oybek", "", 2);
 	// { } linea 3 - ROJA
-	protected Estacion olmazor = new Estacion("Olmazor", { }, 3);
-	protected Estacion chilonzor = new Estacion("Chilonzor", { }, 3);
-	protected Estacion mirzoUlugbek = new Estacion("Mirzo Ulugbek", { }, 3);
-	protected Estacion novza = new Estacion("Novza", { }, 3);
-	protected Estacion milliyBog = new Estacion("Milliy Bog", { }, 3);
-	protected Estacion bunyodkor = new Estacion("Bunyodkor", { }, 3);
-	protected Estacion pakhtakor = new Estacion("Pakhtakor", { }, 3);
-	protected Estacion mustakillikMaydoni = new Estacion("Mustakillik Maydoni", { }, 3);
-	protected Estacion amirTemurHiyoboni = new Estacion("Amir Temur Hiyoboni", { }, 3);
-	protected Estacion khamidAlimjan = new Estacion("Khamid Alimjan", { }, 3);
-	protected Estacion pushkin = new Estacion("Pushkin", { }, 3);
-	protected Estacion buyukIpakYuli = new Estacion("Buyuk Ipak Yuli", { }, 3);
+	protected Estacion olmazor = new Estacion("Olmazor", "Chilonzor", "", "", 3);
+	protected Estacion chilonzor = new Estacion("Chilonzor", "Olmazor", "Mirzo Ulugbek", "", 3);
+	protected Estacion mirzoUlugbek = new Estacion("Mirzo Ulugbek", "Chilonzor", "Novza", "",  3);
+	protected Estacion novza = new Estacion("Novza", "Mirzo Ulugbek", "Milliy Bog", "", 3);
+	protected Estacion milliyBog = new Estacion("Milliy Bog", "Novza", "Bunyodkor", "", 3);
+	protected Estacion bunyodkor = new Estacion("Bunyodkor", "Milliy Bog", "Pakhtakor", "", 3);
+	protected Estacion pakhtakor = new Estacion("Pakhtakor", "Bunyodkor","Mustakillik Maydoni" ,"Alisher Navoi", 3);
+	protected Estacion mustakillikMaydoni = new Estacion("Mustakillik Maydoni", "Pakhtakor","Amir Temur Hiyoboni","", 3);
+	protected Estacion amirTemurHiyoboni = new Estacion("Amir Temur Hiyoboni", "Mustakillik Maydoni","Khamid Alimjan","Yunus Rajabiy", 3);
+	protected Estacion khamidAlimjan = new Estacion("Khamid Alimjan", "Amir Temur Hiyoboni","Pushkin","", 3);
+	protected Estacion pushkin = new Estacion("Pushkin", "Khamid Alimjan","Buyuk Ipak Yuli","", 3);
+	protected Estacion buyukIpakYuli = new Estacion("Buyuk Ipak Yuli", "Pushkin","","", 3);
 	// Añadimos al array de { } las distintas { }
+
+	private String[] estacionesString = { beruni.getNombre(), tinchlik.getNombre(), chorsu.getNombre(), gafurGulom.getNombre(),
+			alisherNavoi.getNombre(), uzbekistan.getNombre(), kosmonavtlar.getNombre(), oybek.getNombre(),
+			toshkent.getNombre(), mashinasozlar.getNombre(), dostlik.getNombre(), shakhriston.getNombre(),
+			bodomzor.getNombre(), minor.getNombre(), abdullaKodiriy.getNombre(), yunusRajabiy.getNombre(),
+			mingUrik.getNombre(), olmazor.getNombre(), chilonzor.getNombre(), mirzoUlugbek.getNombre(),
+			novza.getNombre(), milliyBog.getNombre(), bunyodkor.getNombre(), pakhtakor.getNombre(), mustakillikMaydoni.getNombre(),
+			amirTemurHiyoboni.getNombre(), khamidAlimjan.getNombre(), pushkin.getNombre(), buyukIpakYuli.getNombre() };
+	
+	private Estacion[] estaciones = { beruni, tinchlik, chorsu, gafurGulom, alisherNavoi, uzbekistan, kosmonavtlar,
+			oybek, toshkent, mashinasozlar, dostlik, shakhriston, bodomzor, minor, abdullaKodiriy, yunusRajabiy,
+			mingUrik, olmazor, chilonzor, mirzoUlugbek, novza, milliyBog, bunyodkor, pakhtakor, mustakillikMaydoni,
+			amirTemurHiyoboni, khamidAlimjan, pushkin, buyukIpakYuli };
+
 	/**
 	 * Launch the application.
 	 */
@@ -77,6 +93,7 @@ public class Main extends JFrame {
 	 */
 
 	public Main() {
+		setTitle("Tashkent metro App");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1224, 675);
 		contentPane = new JPanel();
@@ -98,20 +115,30 @@ public class Main extends JFrame {
 		label.setBounds(201, 44, 750, 390);
 		panel.add(label);
 
-		JComboBox<?> comboBox = new JComboBox<Object>();
+		JComboBox<?> comboBox = new JComboBox<Object>(estacionesString);
 		comboBox.setBounds(76, 474, 220, 20);
 		panel.add(comboBox);
 
-		JComboBox<?> comboBox_1 = new JComboBox<Object>();
+		JComboBox<?> comboBox_1 = new JComboBox<Object>(estacionesString);
 		comboBox_1.setBounds(949, 474, 220, 20);
 		panel.add(comboBox_1);
-
+		
 		JButton btnBuscar = new JButton("BUSCAR");
 		btnBuscar.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
 				Ventana ventana = new Ventana();
 				ventana.setVisible(true);
+				if (comboBox.getSelectedItem().equals(comboBox_1.getSelectedItem())) {
+					ventana.lblNewLabel.setText("El origen y el destino no pueden ser el mismo");
+				}else {
+					AEstrella alg = new AEstrella();
+					int tiempo = alg.aEstrella(estaciones, selectorEstacion(comboBox.getSelectedItem().toString()),selectorEstacion(comboBox_1.getSelectedItem().toString())).size()-1;
+					String texto = alg.aEstrella(estaciones, selectorEstacion(comboBox.getSelectedItem().toString()),
+							selectorEstacion(comboBox_1.getSelectedItem().toString())).toString();
+					System.out.println("El recorrido a seguir es:" + texto + "\n" + "El tiempo estimado es de: " + tiempo);
+					ventana.lblNewLabel.setText("El recorrido a seguir es:" + texto + "\n" + "El tiempo estimado es de: " + tiempo + "minutos");
+				}
 			}
 		});
 		btnBuscar.setBounds(521, 499, 160, 41);
@@ -133,4 +160,15 @@ public class Main extends JFrame {
 		txtpnTashkentMetroApp.setBounds(499, 0, 470, 50);
 		panel.add(txtpnTashkentMetroApp);
 	}
+	private Estacion selectorEstacion (String text) { // Metodo que selecciona del array de Estaciones la estacion correspondiente a un String que recibe
+		Estacion resultado = null;
+		for (int i = 0; i < estaciones.length; i++) {
+			if (estaciones[i].getNombre().equals(text)) {
+				resultado =  estaciones[i];
+			}
+		}
+		System.out.println(resultado.toString());
+		return resultado ;
+	}
+
 }

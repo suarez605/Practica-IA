@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Estacion{
 
   private String nombre;
@@ -41,5 +43,15 @@ public class Estacion{
   public int getLinea(){
     return linea;
   }
+
+/* (non-Javadoc)
+ * @see java.lang.Object#toString()
+ */
+@Override
+public String toString() {
+	return "Estacion [nombre=" + nombre + ", estaciones=" + Arrays.toString(estaciones) + ", linea=" + linea + "]";
+}
+  
+  
   
 }
