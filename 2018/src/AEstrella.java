@@ -53,7 +53,86 @@ public class AEstrella {
           vfinal=true;
         }
       }
+    } 
+    
+    
+    
+    
+    /*
+    
+    else{
+      ArrayList<Estacion> resultaux =new ArrayList<Estacion>();
+      ArrayList<Estacion> resultaux2 =new ArrayList<Estacion>();
+      Estacion actual=origen;
+      Estacion anterior=new Estacion("",null,null,null,-1);
+      boolean vfinal=false;
+      boolean aux=false;
+      boolean aux2=false;
+      int nTrasbordos=0;
+      int i=0;
+      int j=0;
+      int h=0;
+      
+      //bucle para los 2 finales posibles y poder guardarlos en variables aux
+      while(h<2){
+      while(!vfinal){
+        result.add(actual);
+        aux=false;
+        i=0;
+        while(!aux){
+          if(!anterior.getNombre().equals(actual.getEstaciones()[i])){
+            aux2=false;
+            j=0;
+            while(!aux2){
+            	String[] aux3 = actual.getEstaciones();
+              if(estaciones[j].equals(aux3[i])){ //dudamos que hace esta linea
+                aux2=true;
+                
+                  anterior=actual;
+                  actual=estaciones[j];
+                  aux=true;
+                
+              }
+              j++;
+            }
+          }
+          if(i==actual.getEstaciones().length-1&&!aux){
+            result.clear();
+            actual=origen;
+            aux=true;
+          }
+          i++;
+        }
+        if(actual.getNombre().equals(destino.getNombre())){
+          result.add(actual);
+          vfinal=true;
+        }
+      }  
+        //primer camino encontrado, lo guardamos en un aux para poder comparar
+        if(h=0){
+         resultaux = result.clone();
+        } //otro camino que llega
+        if(h=1){
+         resultaux2 = result.clone();
+        }
+         h++;
+       
+      }
+      
+      
+      //comparacion de caminos y nos quedamos el pequeño
+      if(resultaux.size()>=resultaux2.size()){
+         result = resultaux2.clone();
+      }
+      else{
+        result = resultaux.clone();
+      }
+      
     }
+    
+    */
+    
+    
     return result;
   }
 
