@@ -75,49 +75,57 @@ public class AEstrella {
       
       //bucle para los 2 finales posibles y poder guardarlos en variables aux
       while(h<2){
-      while(!vfinal){
-        result.add(actual);
-        aux=false;
-        i=0;
-        while(!aux){
-          if(!anterior.getNombre().equals(actual.getEstaciones()[i])){
-            aux2=false;
-            j=0;
-            while(!aux2){
-            	String[] aux3 = actual.getEstaciones();
-              if(estaciones[j].equals(aux3[i])){ //dudamos que hace esta linea
-                aux2=true;
-                
+        while(!vfinal && nTrasbordos<2){// Para coger caminos que hagan 2 o menos trasbordos al destino.
+        //Evitando casos inutiles que llegaban cogiendo 4 trasbordos o infinitos
+          result.add(actual);
+          aux=false;
+          i=0;
+          while(!aux){
+            if(!anterior.getNombre().equals(actual.getEstaciones()[i])){
+              aux2=false;
+              j=0;
+              while(!aux2){
+            	  String[] aux3 = actual.getEstaciones();
+                if(estaciones[j].equals(aux3[i])){ //dudamos que hace esta linea
+                  aux2=true;
                   anterior=actual;
                   actual=estaciones[j];
                   aux=true;
-                
+                  if(actual.getLinea()!=anterior.getLinea()){ //comprobar si ha hecho trasbordo
+                  nTrasbordos++;
+                  }
+                }
+                j++;
               }
-              j++;
             }
-          }
           if(i==actual.getEstaciones().length-1&&!aux){
             result.clear();
             actual=origen;
             aux=true;
+           }
+           i++;
           }
-          i++;
-        }
-        if(actual.getNombre().equals(destino.getNombre())){
+          if(actual.getNombre().equals(destino.getNombre())){
           result.add(actual);
           vfinal=true;
+          }
+          
         }
-      }  
+        
         //primer camino encontrado, lo guardamos en un aux para poder comparar
         if(h=0){
          resultaux = result.clone();
         } //otro camino que llega
-        if(h=1){
+        if(h=1 ){ // Aqui va a mirar el segundo camino, pero podria coger el mismo. Hay que meter condición creemos que en este if
+        //para que h0(1er camino) sea distinto de h1(2do) pero no sabemos comparar arraylist (pq result != resultaux no se podria)
+        // entonces cogeria otro cumpliendo la condicion de menos de 2 trasbordos. O igual sirve pregutar como abajo con los tamaños
+        //  (result.size()>=resultaux.size())
          resultaux2 = result.clone();
         }
+        
          h++;
        
-      }
+      }//llave del while de menor 3 caminos
       
       
       //comparacion de caminos y nos quedamos el pequeño
@@ -128,7 +136,7 @@ public class AEstrella {
         result = resultaux.clone();
       }
       
-    }
+    }//lave del else (lineas diferentes)
     
     */
     
