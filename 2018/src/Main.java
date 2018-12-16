@@ -131,11 +131,11 @@ public class Main extends JFrame {
 				if (comboBox.getSelectedItem().equals(comboBox_1.getSelectedItem())) {
 					JOptionPane.showMessageDialog(null, "El origen y el destino no pueden ser el mismo");
 				}else {
-					AEstrella alg = new AEstrella(); int tiempo = 0;
-					//int tiempo = alg.aEstrella(estaciones, selectorEstacion(comboBox.getSelectedItem().toString()),selectorEstacion(comboBox_1.getSelectedItem().toString())).size()-1;
-					//String texto = alg.aEstrella(estaciones, selectorEstacion(comboBox.getSelectedItem().toString()),
-					//		selectorEstacion(comboBox_1.getSelectedItem().toString())).toString();		
-					String texto = pasarATexto(estaciones) + "\n" + tiempo;
+					AEstrella alg = new AEstrella(); //int tiempo = 0;
+					int tiempo = alg.aEstrella(estaciones, selectorEstacion(comboBox.getSelectedItem().toString()),selectorEstacion(comboBox_1.getSelectedItem().toString())).size()-1;
+					String texto = alg.aEstrella(estaciones, selectorEstacion(comboBox.getSelectedItem().toString()),
+						selectorEstacion(comboBox_1.getSelectedItem().toString())).toString();		
+					//String texto = pasarATexto(estaciones) + "\n" + tiempo;
 					JOptionPane.showMessageDialog(null, texto);
 				}
 			}
