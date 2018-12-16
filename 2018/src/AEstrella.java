@@ -21,7 +21,7 @@ public class AEstrella {
         aux=false;
         i=0;
         while(!aux){
-          if(!primerCamino.getNombre().equals(actual.getEstaciones()[i].getNombre())&&!anterior.getNombre().equals(actual.getEstaciones()[i].getNombre())){
+          if(!primerCamino.getNombre().equals(actual.getEstaciones()[i])&&!anterior.getNombre().equals(actual.getEstaciones()[i])){
             aux2=false;
             j=0;
             while(!aux2){
@@ -121,10 +121,14 @@ public class AEstrella {
             resultaux2.add(result(l));
           }
           h++;
-        } 
+        }
+        
+         
+       
       }//llave del while de menor 3 caminos
       
-      //comparacion de caminos y nos quedamos el mas corto
+      
+      //comparacion de caminos y nos quedamos el pequeño
       if(resultaux.size()>=resultaux2.size()){
          for(int n=0;n<resultaux2.size();n++){
             result.add(resultaux2(n));
