@@ -43,7 +43,7 @@ public class Main extends JFrame {
 	protected Estacion bodomzor = new Estacion("Bodomzor", "Shakhriston", "Minor", null, 2);
 	protected Estacion minor = new Estacion("Minor", "Bodomzor", "Abdulla Kodiriy", null, 2);
 	protected Estacion abdullaKodiriy = new Estacion("Abdulla Kodiriy", "Minor", "Yunus Rajabiy", null, 2);
-	protected Estacion yunusRajabiy = new Estacion("Yunus Rajabiy", "Abdulla Kodiriy", "Ming Uri", "Amir Temur Hiyoboni", 2);
+	protected Estacion yunusRajabiy = new Estacion("Yunus Rajabiy", "Abdulla Kodiriy", "Ming Urik", "Amir Temur Hiyoboni", 2);
 	protected Estacion mingUrik = new Estacion("Ming Urik", "Yunus Rajabiy", "Oybek", null, 2);
 	// { } linea 3 - ROJA
 	protected Estacion olmazor = new Estacion("Olmazor", "Chilonzor", null, null, 3);
@@ -58,7 +58,7 @@ public class Main extends JFrame {
 	protected Estacion khamidAlimjan = new Estacion("Khamid Alimjan", "Amir Temur Hiyoboni","Pushkin",null, 3);
 	protected Estacion pushkin = new Estacion("Pushkin", "Khamid Alimjan","Buyuk Ipak Yuli",null, 3);
 	protected Estacion buyukIpakYuli = new Estacion("Buyuk Ipak Yuli", "Pushkin",null,null, 3);
-	// Añadimos al array de { } las distintas { }
+	// AÃ±adimos al array de { } las distintas { }
 
 
 	private String[] estacionesString = { beruni.getNombre(), tinchlik.getNombre(), chorsu.getNombre(), gafurGulom.getNombre(),
