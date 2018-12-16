@@ -55,10 +55,7 @@ public class AEstrella {
       }
     } 
     
-    
-    
-    
-    /*
+     
     
     else{
       ArrayList<Estacion> resultaux =new ArrayList<Estacion>();
@@ -109,21 +106,19 @@ public class AEstrella {
           result.add(actual);
           vfinal=true;
           }
-          
         }
         
         //primer camino encontrado, lo guardamos en un aux para poder comparar
         if(h=0){
          resultaux = result.clone();
+          h++;
         } //otro camino que llega
-        if(h=1 ){ // Aqui va a mirar el segundo camino, pero podria coger el mismo. Hay que meter condición creemos que en este if
-        //para que h0(1er camino) sea distinto de h1(2do) pero no sabemos comparar arraylist (pq result != resultaux no se podria)
-        // entonces cogeria otro cumpliendo la condicion de menos de 2 trasbordos. O igual sirve pregutar como abajo con los tamaños
-        //  (result.size()>=resultaux.size())
+        if(h=1 && resultaux.size()!=result.size()){ 
          resultaux2 = result.clone();
+          h++;
         }
         
-         h++;
+         
        
       }//llave del while de menor 3 caminos
       
@@ -137,10 +132,7 @@ public class AEstrella {
       }
       
     }//lave del else (lineas diferentes)
-    
-    */
-    
-    
+
     return result;
   }
 
