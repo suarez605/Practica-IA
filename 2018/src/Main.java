@@ -133,9 +133,8 @@ public class Main extends JFrame {
 				}else {
 					AEstrella alg = new AEstrella(); //int tiempo = 0;
 					int tiempo = alg.aEstrella(estaciones, selectorEstacion(comboBox.getSelectedItem().toString()),selectorEstacion(comboBox_1.getSelectedItem().toString())).size()-1;
-					String texto = alg.aEstrella(estaciones, selectorEstacion(comboBox.getSelectedItem().toString()),
-						selectorEstacion(comboBox_1.getSelectedItem().toString())).toString();		
-					//String texto = pasarATexto(estaciones) + "\n" + tiempo;
+					ArrayList<Estacion> camino = alg.aEstrella(estaciones, selectorEstacion(comboBox.getSelectedItem().toString()),selectorEstacion(comboBox_1.getSelectedItem().toString()));		
+					String texto = "El camino que se debe seguir es: " + pasarATexto(camino) + "\n" + "El tiempo estimado del recorrido es de: " + tiempo;
 					JOptionPane.showMessageDialog(null, texto);
 				}
 			}
@@ -169,10 +168,10 @@ public class Main extends JFrame {
 		return resultado ;
 	}
 	
-	private String pasarATexto(Estacion[] camino) {
+	private String pasarATexto(ArrayList<Estacion> camino) {
 		String texto = "";
-		for (int i = 0; i < camino.length; i++) {
-			texto = texto + " " + camino[i].getNombre() + "\n";
+		for (int i = 0; i < camino.size(); i++) {
+			texto = texto + " " + camino.get(i).getNombre() + "\n";
 		}
 		
 		return texto;
