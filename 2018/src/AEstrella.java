@@ -71,6 +71,7 @@ public class AEstrella {
 			boolean aux=false;
 			boolean aux2=false;
 			boolean prohibidoAux=false;
+			boolean repetidoAux=false;
 			int i=0;
 			int j=0;
 			int h=0;
@@ -91,8 +92,14 @@ public class AEstrella {
 									prohibidoAux=true;
 								}
 							}
+							
+							for(int k=0;k<result.size();k++){
+								if(actual.getEstaciones()[i].equals(result.get(k).getNombre())){
+									repetidoAux=true;
+								}
+							}
 
-							if(!prohibidoAux){
+							if(!prohibidoAux&&!repetidoAux){
 								while(!aux2){
 									String[] aux3 = actual.getEstaciones();
 									if(estaciones[j].getNombre().equals(aux3[i])){
