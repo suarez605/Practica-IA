@@ -58,8 +58,6 @@ public class AEstrella {
 			}
 		} 
 
-
-
 		else{
 			ArrayList<Estacion> resultaux =new ArrayList<Estacion>();
 			ArrayList<Estacion> resultaux2 =new ArrayList<Estacion>();
@@ -130,16 +128,6 @@ public class AEstrella {
 						vfinal=true;
 					}
 				}
-
-				//primer camino encontrado, lo guardamos en un aux para poder comparar
-				if(h==0){
-					for(int k=0;k<result.size();k++){
-						resultaux.add(result.get(k));
-					}
-					h++;
-					vfinal=false;
-				} 
-				//otro camino que llega
 				if(h==1 && resultaux.size()!=result.size()){ 
 					for(int l=0;l<result.size();l++){
 						resultaux2.add(result.get(l));
@@ -147,13 +135,15 @@ public class AEstrella {
 					h++;
 					vfinal=false;
 				}
+				if(h==0){
+					for(int k=0;k<result.size();k++){
+						resultaux.add(result.get(k));
+					}
+					h++;
+					vfinal=false;
+				} 
+			}
 
-
-
-			}//llave del while de menor 3 caminos
-
-
-			//comparacion de caminos y nos quedamos el pequeño
 			if(resultaux.size()>=resultaux2.size()){
 				for(int n=0;n<resultaux2.size();n++){
 					result.add(resultaux2.get(n));
@@ -164,10 +154,7 @@ public class AEstrella {
 					result.add(resultaux.get(m));
 				}
 			}
-
-		}//lave del else (lineas diferentes)
-
+		}
 		return result;
 	}
-
 }
