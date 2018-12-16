@@ -26,7 +26,7 @@ public class AEstrella {
             j=0;
             while(!aux2){
             	String[] aux3 = actual.getEstaciones();
-              if(estaciones[j].equals(aux3[i])){
+              if(estaciones[j].getNombre().equals(aux3[i])){
                 aux2=true;
                 if(estaciones[j].getLinea()==actual.getLinea()){
                   anterior=actual;
