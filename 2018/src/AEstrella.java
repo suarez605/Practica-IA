@@ -137,6 +137,7 @@ public class AEstrella {
 						resultaux.add(result.get(k));
 					}
 					h++;
+					vfinal=true;
 				} 
 				//otro camino que llega
 				if(h==1 && resultaux.size()!=result.size()){ 
@@ -144,6 +145,7 @@ public class AEstrella {
 						resultaux2.add(result.get(l));
 					}
 					h++;
+					vfinal=true;
 				}
 
 
