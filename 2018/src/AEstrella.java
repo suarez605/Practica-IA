@@ -96,6 +96,9 @@ public class AEstrella {
                   }
                 }
                 j++;
+                if(j>=estaciones.length){
+            	    aux2=true; 
+                 }
               }
             }
           if(i==actual.getEstaciones().length-1&&!aux){
