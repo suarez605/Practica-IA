@@ -21,7 +21,7 @@ public class AEstrella {
         aux=false;
         i=0;
         while(!aux){
-          if(!primerCamino.getNombre().equals(actual.getEstaciones()[i])&&!anterior.getNombre().equals(actual.getEstaciones()[i])){
+          if(!primerCamino.getNombre().equals(actual.getEstaciones()[i].getNombre())&&!anterior.getNombre().equals(actual.getEstaciones()[i])){
             aux2=false;
             j=0;
             while(!aux2){
