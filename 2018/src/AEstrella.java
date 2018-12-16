@@ -73,15 +73,12 @@ public class AEstrella {
 			boolean aux=false;
 			boolean aux2=false;
 			boolean prohibidoAux=false;
-			int nTrasbordos=0;
 			int i=0;
 			int j=0;
 			int h=0;
 
-			//bucle para los 2 finales posibles y poder guardarlos en variables aux
 			while(h<2){
-				while(!vfinal){// Para coger caminos que hagan 2 o menos trasbordos al destino.
-					//Evitando casos inutiles que llegaban cogiendo 4 trasbordos o infinitos
+				while(!vfinal){
 					result.add(actual);
 					aux=false;
 					i=0;
