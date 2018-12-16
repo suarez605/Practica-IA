@@ -109,14 +109,14 @@ public class AEstrella {
         }
         
         //primer camino encontrado, lo guardamos en un aux para poder comparar
-        if(h=0){
+        if(h==0){
           for(int k=0;k<result.size();k++){
             resultaux.add(result(k));
           }
           h++;
         } 
         //otro camino que llega
-        if(h=1 && resultaux.size()!=result.size()){ 
+        if(h==1 && resultaux.size()!=result.size()){ 
         for(int l=0;l<result.size();l++){
             resultaux2.add(result(l));
           }
