@@ -85,6 +85,7 @@ public class AEstrella {
 						if(!anterior.getNombre().equals(actual.getEstaciones()[i])){
 							aux2=false;
 							prohibidoAux=false;
+							repetidoAux=false;
 							j=0;
 
 							for(int k=0;k<prohibidas.size();k++){
