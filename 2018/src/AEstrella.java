@@ -121,14 +121,10 @@ public class AEstrella {
             resultaux2.add(result(l));
           }
           h++;
-        }
-        
-         
-       
+        } 
       }//llave del while de menor 3 caminos
       
-      
-      //comparacion de caminos y nos quedamos el pequeño
+      //comparacion de caminos y nos quedamos el mas corto
       if(resultaux.size()>=resultaux2.size()){
          for(int n=0;n<resultaux2.size();n++){
             result.add(resultaux2(n));
