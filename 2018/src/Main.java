@@ -60,6 +60,7 @@ public class Main extends JFrame {
 	protected Estacion buyukIpakYuli = new Estacion("Buyuk Ipak Yuli", "Pushkin","","", 3);
 	// Añadimos al array de { } las distintas { }
 
+
 	private String[] estacionesString = { beruni.getNombre(), tinchlik.getNombre(), chorsu.getNombre(), gafurGulom.getNombre(),
 			alisherNavoi.getNombre(), uzbekistan.getNombre(), kosmonavtlar.getNombre(), oybek.getNombre(),
 			toshkent.getNombre(), mashinasozlar.getNombre(), dostlik.getNombre(), shakhriston.getNombre(),
@@ -134,7 +135,7 @@ public class Main extends JFrame {
 					AEstrella alg = new AEstrella(); //int tiempo = 0;
 					int tiempo = alg.aEstrella(estaciones, selectorEstacion(comboBox.getSelectedItem().toString()),selectorEstacion(comboBox_1.getSelectedItem().toString())).size()-1;
 					ArrayList<Estacion> camino = alg.aEstrella(estaciones, selectorEstacion(comboBox.getSelectedItem().toString()),selectorEstacion(comboBox_1.getSelectedItem().toString()));		
-					String texto = "El camino que se debe seguir es: " + pasarATexto(camino) + "\n" + "El tiempo estimado del recorrido es de: " + tiempo;
+					String texto = "El camino que se debe seguir es: " + pasarATexto(camino) + "\n" + "El tiempo estimado del recorrido es de: " + tiempo + " minutos";
 					JOptionPane.showMessageDialog(null, texto);
 				}
 			}
