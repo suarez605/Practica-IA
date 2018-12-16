@@ -80,7 +80,7 @@ public class AEstrella {
 
 			//bucle para los 2 finales posibles y poder guardarlos en variables aux
 			while(h<2){
-				while(!vfinal && nTrasbordos<2){// Para coger caminos que hagan 2 o menos trasbordos al destino.
+				while(!vfinal){// Para coger caminos que hagan 2 o menos trasbordos al destino.
 					//Evitando casos inutiles que llegaban cogiendo 4 trasbordos o infinitos
 					result.add(actual);
 					aux=false;
@@ -111,9 +111,6 @@ public class AEstrella {
 										if(inicio){
 											prohibida=actual;
 											inicio=false;
-										}
-										if(actual.getLinea()!=anterior.getLinea()){ //comprobar si ha hecho trasbordo
-											nTrasbordos++;
 										}
 									}
 									j++;
