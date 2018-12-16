@@ -132,15 +132,21 @@ public class AEstrella {
 					for(int l=0;l<result.size();l++){
 						resultaux2.add(result.get(l));
 					}
-					h++;
 					vfinal=false;
+					anterior=new Estacion("",null,null,null,-1);
+					result.clear();
+					actual=origen;
+					h++;
 				}
 				if(h==0){
 					for(int k=0;k<result.size();k++){
 						resultaux.add(result.get(k));
 					}
-					h++;
 					vfinal=false;
+					anterior=new Estacion("",null,null,null,-1);
+					result.clear();
+					actual=origen;
+					h++;
 				} 
 			}
 
