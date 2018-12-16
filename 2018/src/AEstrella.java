@@ -78,7 +78,7 @@ public class AEstrella {
           aux=false;
           i=0;
           while(!aux){
-            if(!anterior.getNombre().equals(actual.getEstaciones()[i])){
+            if(!anterior.getNombre().equals(actual.getEstaciones()[i].getNombre())){
               aux2=false;
               j=0;
               while(!aux2){
@@ -110,11 +110,16 @@ public class AEstrella {
         
         //primer camino encontrado, lo guardamos en un aux para poder comparar
         if(h=0){
-         resultaux = result.clone();
+          for(int k=0;k<result.size();k++){
+            resultaux.add(result(k));
+          }
           h++;
-        } //otro camino que llega
+        } 
+        //otro camino que llega
         if(h=1 && resultaux.size()!=result.size()){ 
-         resultaux2 = result.clone();
+        for(int l=0;l<result.size();l++){
+            resultaux2.add(result(l));
+          }
           h++;
         }
         
@@ -125,10 +130,14 @@ public class AEstrella {
       
       //comparacion de caminos y nos quedamos el pequeño
       if(resultaux.size()>=resultaux2.size()){
-         result = resultaux2.clone();
+         for(int n=0;n<resultaux2.size();n++){
+            result.add(resultaux2(n));
+          }
       }
       else{
-        result = resultaux.clone();
+        for(int m=0;m<resultaux.size();m++){
+            result.add(resultaux(m));
+          }
       }
       
     }//lave del else (lineas diferentes)
