@@ -86,7 +86,7 @@ public class AEstrella {
               j=0;
               while(!aux2){
             	  String[] aux3 = actual.getEstaciones();
-                if(estaciones[j].getLinea()==actual.getLinea()){ //dudamos que hace esta linea
+                if(estaciones[j].getNombre().equals(aux3[i])){ //dudamos que hace esta linea
                   aux2=true;
                   anterior=actual;
                   actual=estaciones[j];
