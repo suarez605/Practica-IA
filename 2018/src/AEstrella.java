@@ -117,7 +117,6 @@ public class AEstrella {
 						}
 						if(i==actual.getEstaciones().length-1&&!aux){
 							result.clear();
-							prohibidas.add(actual);
 							actual=origen;
 							prohibidas.add(prohibida);
 							aux=true;
