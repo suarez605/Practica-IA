@@ -27,37 +27,37 @@ public class Main extends JFrame {
 
 	
 	// { } linea 1 - AZUL
-	protected Estacion beruni = new Estacion("Beruni", "Tinchlik","", "", 1);
-	protected Estacion tinchlik = new Estacion("Tinchlik", "Beruni", "Chorsu", "", 1);
-	protected Estacion chorsu = new Estacion("Chorsu", "Tinchlik", "Gafur Gulom", "", 1);
-	protected Estacion gafurGulom = new Estacion("Gafur Gulom", "Chorsu", "Alisher Navoi", "",  1);
+	protected Estacion beruni = new Estacion("Beruni", "Tinchlik", null, null, 1);
+	protected Estacion tinchlik = new Estacion("Tinchlik", "Beruni", "Chorsu", null, 1);
+	protected Estacion chorsu = new Estacion("Chorsu", "Tinchlik", "Gafur Gulom", null, 1);
+	protected Estacion gafurGulom = new Estacion("Gafur Gulom", "Chorsu", "Alisher Navoi", null,  1);
 	protected Estacion alisherNavoi = new Estacion("Alisher Navoi", "Gafur Gulom","Uzbekistan", "Pakhtakor", 1);
-	protected Estacion uzbekistan = new Estacion("Uzbekistan", "Alisher Navoi","Kosmonavtlar", "", 1);
-	protected Estacion kosmonavtlar = new Estacion("Kosmonavtlar", "Uzbekistan", "Oybek", "", 1);
+	protected Estacion uzbekistan = new Estacion("Uzbekistan", "Alisher Navoi","Kosmonavtlar", null, 1);
+	protected Estacion kosmonavtlar = new Estacion("Kosmonavtlar", "Uzbekistan", "Oybek", null, 1);
 	protected Estacion oybek = new Estacion("Oybek", "Kosmonavtlar", "Toshkent", "Ming Urik", 1);
-	protected Estacion toshkent = new Estacion("Toshkent", "Oybek", "Mashinasozlar", "", 1);
-	protected Estacion mashinasozlar = new Estacion("Mashinasozlar", "Toshkent", "Dostlik", "", 1);
-	protected Estacion dostlik = new Estacion("Dostlik", "Mashinasozlar","","", 1);
+	protected Estacion toshkent = new Estacion("Toshkent", "Oybek", "Mashinasozlar", null, 1);
+	protected Estacion mashinasozlar = new Estacion("Mashinasozlar", "Toshkent", "Dostlik", null, 1);
+	protected Estacion dostlik = new Estacion("Dostlik", "Mashinasozlar",null,null, 1);
 	// { } linea 2 - VERDE
-	protected Estacion shakhriston = new Estacion("Shakhriston", "Bodomzor", "", "", 2);
-	protected Estacion bodomzor = new Estacion("Bodomzor", "Shakhriston", "Minor", "", 2);
-	protected Estacion minor = new Estacion("Minor", "Bodomzor", "Abdulla Kodiriy", "", 2);
-	protected Estacion abdullaKodiriy = new Estacion("Abdulla Kodiriy", "Minor", "Yunus Rajabiy", "", 2);
+	protected Estacion shakhriston = new Estacion("Shakhriston", "Bodomzor", null, null, 2);
+	protected Estacion bodomzor = new Estacion("Bodomzor", "Shakhriston", "Minor", null, 2);
+	protected Estacion minor = new Estacion("Minor", "Bodomzor", "Abdulla Kodiriy", null, 2);
+	protected Estacion abdullaKodiriy = new Estacion("Abdulla Kodiriy", "Minor", "Yunus Rajabiy", null, 2);
 	protected Estacion yunusRajabiy = new Estacion("Yunus Rajabiy", "Abdulla Kodiriy", "Ming Uri", "Amir Temur Hiyoboni", 2);
-	protected Estacion mingUrik = new Estacion("Ming Urik", "Yunus Rajabiy", "Oybek", "", 2);
+	protected Estacion mingUrik = new Estacion("Ming Urik", "Yunus Rajabiy", "Oybek", null, 2);
 	// { } linea 3 - ROJA
-	protected Estacion olmazor = new Estacion("Olmazor", "Chilonzor", "", "", 3);
-	protected Estacion chilonzor = new Estacion("Chilonzor", "Olmazor", "Mirzo Ulugbek", "", 3);
-	protected Estacion mirzoUlugbek = new Estacion("Mirzo Ulugbek", "Chilonzor", "Novza", "",  3);
-	protected Estacion novza = new Estacion("Novza", "Mirzo Ulugbek", "Milliy Bog", "", 3);
-	protected Estacion milliyBog = new Estacion("Milliy Bog", "Novza", "Bunyodkor", "", 3);
-	protected Estacion bunyodkor = new Estacion("Bunyodkor", "Milliy Bog", "Pakhtakor", "", 3);
+	protected Estacion olmazor = new Estacion("Olmazor", "Chilonzor", null, null, 3);
+	protected Estacion chilonzor = new Estacion("Chilonzor", "Olmazor", "Mirzo Ulugbek", null, 3);
+	protected Estacion mirzoUlugbek = new Estacion("Mirzo Ulugbek", "Chilonzor", "Novza", null,  3);
+	protected Estacion novza = new Estacion("Novza", "Mirzo Ulugbek", "Milliy Bog", null, 3);
+	protected Estacion milliyBog = new Estacion("Milliy Bog", "Novza", "Bunyodkor", null, 3);
+	protected Estacion bunyodkor = new Estacion("Bunyodkor", "Milliy Bog", "Pakhtakor", null, 3);
 	protected Estacion pakhtakor = new Estacion("Pakhtakor", "Bunyodkor","Mustakillik Maydoni" ,"Alisher Navoi", 3);
-	protected Estacion mustakillikMaydoni = new Estacion("Mustakillik Maydoni", "Pakhtakor","Amir Temur Hiyoboni","", 3);
+	protected Estacion mustakillikMaydoni = new Estacion("Mustakillik Maydoni", "Pakhtakor","Amir Temur Hiyoboni",null, 3);
 	protected Estacion amirTemurHiyoboni = new Estacion("Amir Temur Hiyoboni", "Mustakillik Maydoni","Khamid Alimjan","Yunus Rajabiy", 3);
-	protected Estacion khamidAlimjan = new Estacion("Khamid Alimjan", "Amir Temur Hiyoboni","Pushkin","", 3);
-	protected Estacion pushkin = new Estacion("Pushkin", "Khamid Alimjan","Buyuk Ipak Yuli","", 3);
-	protected Estacion buyukIpakYuli = new Estacion("Buyuk Ipak Yuli", "Pushkin","","", 3);
+	protected Estacion khamidAlimjan = new Estacion("Khamid Alimjan", "Amir Temur Hiyoboni","Pushkin",null, 3);
+	protected Estacion pushkin = new Estacion("Pushkin", "Khamid Alimjan","Buyuk Ipak Yuli",null, 3);
+	protected Estacion buyukIpakYuli = new Estacion("Buyuk Ipak Yuli", "Pushkin",null,null, 3);
 	// Añadimos al array de { } las distintas { }
 
 
