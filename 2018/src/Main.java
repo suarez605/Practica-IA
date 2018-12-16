@@ -164,7 +164,6 @@ public class Main extends JFrame {
 				resultado =  estaciones[i];
 			}
 		}
-		System.out.println(resultado.toString());
 		return resultado ;
 	}
 	
