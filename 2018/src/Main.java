@@ -7,6 +7,7 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import java.awt.Color;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import java.awt.Font;
 import javax.swing.SwingConstants;
@@ -127,17 +128,15 @@ public class Main extends JFrame {
 		btnBuscar.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
-				Ventana ventana = new Ventana();
-				ventana.setVisible(true);
 				if (comboBox.getSelectedItem().equals(comboBox_1.getSelectedItem())) {
-					ventana.lblNewLabel.setText("El origen y el destino no pueden ser el mismo");
+					JOptionPane.showMessageDialog(null, "El origen y el destino no pueden ser el mismo");
 				}else {
-					AEstrella alg = new AEstrella();
-					int tiempo = alg.aEstrella(estaciones, selectorEstacion(comboBox.getSelectedItem().toString()),selectorEstacion(comboBox_1.getSelectedItem().toString())).size()-1;
-					String texto = alg.aEstrella(estaciones, selectorEstacion(comboBox.getSelectedItem().toString()),
-							selectorEstacion(comboBox_1.getSelectedItem().toString())).toString();
-					System.out.println("El recorrido a seguir es:" + texto + "\n" + "El tiempo estimado es de: " + tiempo);
-					ventana.lblNewLabel.setText("El recorrido a seguir es:" + texto + "\n" + "El tiempo estimado es de: " + tiempo + "minutos");
+					AEstrella alg = new AEstrella(); int tiempo = 0;
+					//int tiempo = alg.aEstrella(estaciones, selectorEstacion(comboBox.getSelectedItem().toString()),selectorEstacion(comboBox_1.getSelectedItem().toString())).size()-1;
+					//String texto = alg.aEstrella(estaciones, selectorEstacion(comboBox.getSelectedItem().toString()),
+					//		selectorEstacion(comboBox_1.getSelectedItem().toString())).toString();		
+					String texto = pasarATexto(estaciones) + "\n" + tiempo;
+					JOptionPane.showMessageDialog(null, texto);
 				}
 			}
 		});
@@ -153,12 +152,11 @@ public class Main extends JFrame {
 		txtpnEstacionDestino.setText("ESTACION DESTINO");
 		txtpnEstacionDestino.setBounds(964, 443, 205, 20);
 		panel.add(txtpnEstacionDestino);
-
-		JTextPane txtpnTashkentMetroApp = new JTextPane();
-		txtpnTashkentMetroApp.setFont(new Font("Tahoma", Font.PLAIN, 26));
-		txtpnTashkentMetroApp.setText("TASHKENT METRO APP");
-		txtpnTashkentMetroApp.setBounds(499, 0, 470, 50);
-		panel.add(txtpnTashkentMetroApp);
+		
+		JLabel lblTashkentMetroApp = new JLabel("TASHKENT METRO APP");
+		lblTashkentMetroApp.setFont(new Font("Tahoma", Font.PLAIN, 29));
+		lblTashkentMetroApp.setBounds(480, 0, 311, 33);
+		panel.add(lblTashkentMetroApp);
 	}
 	private Estacion selectorEstacion (String text) { // Metodo que selecciona del array de Estaciones la estacion correspondiente a un String que recibe
 		Estacion resultado = null;
@@ -170,5 +168,14 @@ public class Main extends JFrame {
 		System.out.println(resultado.toString());
 		return resultado ;
 	}
-
+	
+	private String pasarATexto(Estacion[] camino) {
+		String texto = "";
+		for (int i = 0; i < camino.length; i++) {
+			texto = texto + " " + camino[i].getNombre() + "\n";
+		}
+		
+		return texto;
+		
+	}
 }
