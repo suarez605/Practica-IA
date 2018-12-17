@@ -151,7 +151,6 @@ public class AEstrella {
 					for(int l=0;l<result.size();l++){
 						resultaux2.add(result.get(l));
 					}
-					vfinal=false;
 					anterior=new Estacion("",null,null,null,-1);
 					result.clear();
 					actual=origen;
