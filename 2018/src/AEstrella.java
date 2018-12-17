@@ -74,9 +74,8 @@ public class AEstrella {
 			boolean repetidoAux=false;
 			int i=0;
 			int j=0;
-			int h=0;
 
-			while(h<2){
+			for(int h=0;h<2;h++){
 				while(!vfinal){
 					result.add(actual);
 					aux=false;
@@ -137,6 +136,16 @@ public class AEstrella {
 						vfinal=true;
 					}
 				}
+
+				if(h==0){
+					for(int k=0;k<result.size();k++){
+						resultaux.add(result.get(k));
+					}
+					vfinal=false;
+					anterior=new Estacion("",null,null,null,-1);
+					result.clear();
+					actual=origen;
+				} 
 				
 				if(h==1 && resultaux.size()!=result.size()){ 
 					for(int l=0;l<result.size();l++){
@@ -146,20 +155,9 @@ public class AEstrella {
 					anterior=new Estacion("",null,null,null,-1);
 					result.clear();
 					actual=origen;
-					h++;
 				}
-				if(h==0){
-					for(int k=0;k<result.size();k++){
-						resultaux.add(result.get(k));
-					}
-					vfinal=false;
-					anterior=new Estacion("",null,null,null,-1);
-					result.clear();
-					actual=origen;
-					h++;
-				} 
 			}
-			
+
 			
 
 			if(resultaux.size()>=resultaux2.size()){
