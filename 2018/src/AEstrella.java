@@ -139,7 +139,7 @@ public class AEstrella {
 					actual=origen;
 				} 
 				
-				if(h==1 && resultaux.size()!=result.size()){ 
+				if(h==1){ 
 					for(int l=0;l<result.size();l++){
 						resultaux2.add(result.get(l));
 					}
