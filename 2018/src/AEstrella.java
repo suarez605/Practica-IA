@@ -131,11 +131,13 @@ public class AEstrella {
 						}
 						i++;
 					}
-					if(actual.getNombre().equals(destino.getNombre())){
+					if(actual.getLinea()==destino.getLinea()){
 						result.add(actual);
+						prohibidas.add(actual);
 						vfinal=true;
 					}
 				}
+				
 				if(h==1 && resultaux.size()!=result.size()){ 
 					for(int l=0;l<result.size();l++){
 						resultaux2.add(result.get(l));
@@ -157,6 +159,8 @@ public class AEstrella {
 					h++;
 				} 
 			}
+			
+			
 
 			if(resultaux.size()>=resultaux2.size()){
 				for(int n=0;n<resultaux2.size();n++){
